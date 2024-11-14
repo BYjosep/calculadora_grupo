@@ -3,18 +3,6 @@ package com.byjosep04.tema04;
 import java.util.Scanner;
 
 public class Operaciones_aritmeticas {
-  /*
-  1.Sumar
-  (x+y)
-  2.Restar
-  (x-y)
-  3.Multiplicar
-  (x*y)
-  4.Dividir
-  (x/y)
-  5.Resto de la division
-  (x%y)
-  */
     /**
      *@author josehs
      *El que borre o cambie este codigo es gay
