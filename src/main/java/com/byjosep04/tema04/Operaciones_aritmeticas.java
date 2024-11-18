@@ -54,9 +54,9 @@ public class Operaciones_aritmeticas {
      */
     public static float restarNumero(){
         Scanner escaner = new Scanner(System.in);
-        System.out.println("Restar\nDime el primer numero: ");
+        System.out.println("Restar\nDime el minuendo: ");
         float x=Float.parseFloat(escaner.nextLine());
-        System.out.println("Dime el segundo numero: ");
+        System.out.println("Dime el sustraendo: ");
         float y=Float.parseFloat(escaner.nextLine());
         float restar=x-y;
         System.out.println("La resta de " +x+ " y " + y+ " es: "+restar);
@@ -82,9 +82,9 @@ public class Operaciones_aritmeticas {
      */
     public static float dividirNumero(){
         Scanner escaner = new Scanner(System.in);
-        System.out.println("Dividir\nDime el primer numero: ");
+        System.out.println("Dividir\nDime el dividendo: ");
         float x=Float.parseFloat(escaner.nextLine());
-        System.out.println("Dime el segundo numero: ");
+        System.out.println("Dime el divisor: ");
         float y=Float.parseFloat(escaner.nextLine());
         float dividir=x/y;
         System.out.println("La division de " +x+ " y " + y + " es: "+dividir);
@@ -96,9 +96,9 @@ public class Operaciones_aritmeticas {
      */
     public static float restoDivision(){
         Scanner escaner = new Scanner(System.in);
-        System.out.println("Resto de la division\nDime el primer numero: ");
+        System.out.println("Resto de la division\nDime el divisor: ");
         float x=Float.parseFloat(escaner.nextLine());
-        System.out.println("Dime el segundo numero: ");
+        System.out.println("Dime el divisor: ");
         float y=Float.parseFloat(escaner.nextLine());
         float resto=x%y;
         System.out.println("El resto de la division de " +x+ " y " + y+ " es: "+resto);
