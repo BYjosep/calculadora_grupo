@@ -34,6 +34,11 @@ public class Operaciones_aritmeticas {
             }
         } while(n != 0);
     }
+
+    /**
+     *
+     * @return sumar: Hacemos una suma de dos floats;
+     */
     public static float sumarNumero(){
         Scanner escaner = new Scanner(System.in);
         System.out.println("Sumar");
@@ -45,6 +50,11 @@ public class Operaciones_aritmeticas {
         System.out.println("La suma de " +x+ " y " + y+ " es: "+sumar);
         return sumar;
     }
+
+    /**
+     *
+     * @return restar: Restamos de dos numeros;
+     */
     public static float restarNumero(){
         Scanner escaner = new Scanner(System.in);
         System.out.println("Restar");
@@ -56,6 +66,11 @@ public class Operaciones_aritmeticas {
         System.out.println("La resta de " +x+ " y " + y+ " es: "+restar);
         return restar;
     }
+
+    /**
+     *
+     * @return multiplicar: Multiplicar dos numeros;
+     */
     public static float multiplicarNumero(){
         Scanner escaner = new Scanner(System.in);
         System.out.println("Multiplicar");
@@ -67,6 +82,11 @@ public class Operaciones_aritmeticas {
         System.out.println("La multiplicacion de " +x+ " y " + y+ " es: "+multiplicar);
         return multiplicar;
     }
+
+    /**
+     *
+     * @return dividir: dividimos dos numeros;
+     */
     public static float dividirNumero(){
         Scanner escaner = new Scanner(System.in);
         System.out.println("Dividir");
@@ -78,6 +98,11 @@ public class Operaciones_aritmeticas {
         System.out.println("La division de " +x+ " y " + y + " es: "+dividir);
         return dividir;
     }
+
+    /**
+     *
+     * @return resto: sacamos el resto de una division;
+     */
     public static float restoDivision(){
         Scanner escaner = new Scanner(System.in);
         System.out.println("Resto de la division");
