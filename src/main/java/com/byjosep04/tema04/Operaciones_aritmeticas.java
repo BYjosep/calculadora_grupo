@@ -36,7 +36,7 @@ public class Operaciones_aritmeticas {
     }
 
     /**
-     *
+     * @param pedimos dos floats;
      * @return sumar: Hacemos una suma de dos floats;
      */
     public static float sumarNumero(){
@@ -52,7 +52,7 @@ public class Operaciones_aritmeticas {
     }
 
     /**
-     *
+     * @param pedimos dos floats;
      * @return restar: Restamos de dos numeros;
      */
     public static float restarNumero(){
@@ -68,7 +68,7 @@ public class Operaciones_aritmeticas {
     }
 
     /**
-     *
+     * @param pedimos dos floats;
      * @return multiplicar: Multiplicar dos numeros;
      */
     public static float multiplicarNumero(){
@@ -84,7 +84,7 @@ public class Operaciones_aritmeticas {
     }
 
     /**
-     *
+     * @param pedimos dos floats;
      * @return dividir: dividimos dos numeros;
      */
     public static float dividirNumero(){
@@ -100,7 +100,7 @@ public class Operaciones_aritmeticas {
     }
 
     /**
-     *
+     * @param pedimos dos floats;
      * @return resto: sacamos el resto de una division;
      */
     public static float restoDivision(){
