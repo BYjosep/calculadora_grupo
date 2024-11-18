@@ -3,11 +3,12 @@ package com.byjosep04.tema04;
 import java.util.Scanner;
 
 public class Operaciones_aritmeticas {
+    public static Scanner escaner = new Scanner(System.in);
     /**
      *@author josehs
      */
     public static void main( String args[] ) {
-        Scanner escaner = new Scanner(System.in);
+
         int n;
 
         do{
@@ -39,7 +40,6 @@ public class Operaciones_aritmeticas {
      * @return sumar: Hacemos una suma de dos floats;
      */
     public static float sumarNumero(){
-        Scanner escaner = new Scanner(System.in);
         System.out.println("Sumar\nDime el primer numero: ");
         float x=Float.parseFloat(escaner.nextLine());
         System.out.println("Dime el segundo numero: ");
@@ -53,7 +53,6 @@ public class Operaciones_aritmeticas {
      * @return restar: Restamos de dos numeros;
      */
     public static float restarNumero(){
-        Scanner escaner = new Scanner(System.in);
         System.out.println("Restar\nDime el minuendo: ");
         float x=Float.parseFloat(escaner.nextLine());
         System.out.println("Dime el sustraendo: ");
@@ -67,7 +66,6 @@ public class Operaciones_aritmeticas {
      * @return multiplicar: Multiplicar dos numeros;
      */
     public static float multiplicarNumero(){
-        Scanner escaner = new Scanner(System.in);
         System.out.println("Multiplicar\nDime el primer numero: ");
         float x=Float.parseFloat(escaner.nextLine());
         System.out.println("Dime el segundo numero: ");
@@ -81,7 +79,6 @@ public class Operaciones_aritmeticas {
      * @return dividir: dividimos dos numeros;
      */
     public static float dividirNumero(){
-        Scanner escaner = new Scanner(System.in);
         System.out.println("Dividir\nDime el dividendo: ");
         float x=Float.parseFloat(escaner.nextLine());
         System.out.println("Dime el divisor: ");
@@ -95,7 +92,6 @@ public class Operaciones_aritmeticas {
      * @return resto: sacamos el resto de una division;
      */
     public static float restoDivision(){
-        Scanner escaner = new Scanner(System.in);
         System.out.println("Resto de la division\nDime el divisor: ");
         float x=Float.parseFloat(escaner.nextLine());
         System.out.println("Dime el divisor: ");
