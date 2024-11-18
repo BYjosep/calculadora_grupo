@@ -1,8 +1,11 @@
 package com.byjosep04.tema04;
 
-import java.util.Scanner;
+import com.byjosep04.tema04.lib.StringLib;
+
+/**
+ * @author BYjosep04
+ */
 public class BinarioHexadecimal {
-    public static Scanner scanner = new Scanner(System.in);
     public static final String ESC = "\u001b[";
 
     public static void main(String[] args) {
@@ -13,18 +16,18 @@ public class BinarioHexadecimal {
         System.out.print(ESC + "H");
         System.out.print(ESC + "2J");
         System.out.flush();
-        opcion = ingresarUnNumero("Ingrese una opcion\n" +
+        opcion = StringLib.ingresarUnNumero("Ingrese una opcion\n" +
                 "1. Hexadecimal a binario\n" +
                 "2. Binario a hexadecimal\n" +
                 "0. Salir",0,2);
         switch (opcion) {
             case 1-> {
-                numero= ingresarTexto("Ingrese un numero en hexadecimal");
+                numero= StringLib.ingresarTexto("Ingrese un numero en hexadecimal");
                 conversion = hexadecimalBinario(numero);
                 System.out.println(conversion);
             }
             case 2-> {
-                numero= ingresarTexto("Ingrese un numero en binario");
+                numero= StringLib.ingresarTexto("Ingrese un numero en binario");
                 System.out.println(numero);
             }
             default -> {}
@@ -34,42 +37,6 @@ public class BinarioHexadecimal {
     }
 
 
-    /**
-     * Ingresar número con valor minimo y maximo.
-     * Recuerde cerrar {@link Scanner Scanner} con el metodo cerrarScanner
-     * (Echo para no tener que estar escribiendo este codigo en cada ejercicio)
-     *
-     * @return Devuelve la frase ingresada en formato {@link Character char}
-     */
-    public static int ingresarUnNumero(String texto, int min, int max) {
-        int numero;
-
-        do {
-
-            System.out.println(texto);
-            numero = Integer.parseInt(scanner.nextLine());
-        }while (numero < min && numero > max);
-
-        return numero;
-
-    }
-
-
-    /**
-     * Ingresar text.
-     * Recuerde cerrar {@link Scanner Scanner} con el metodo cerrarScaner
-     * (Echo para no tener que estar escribiendo este codigo en cada ejercicio)
-     * @return Devuelve la frase ingresada en formato {@link String String}
-     */
-    public static String ingresarTexto(String texto) {
-        String palabra;
-
-        System.out.println(texto);
-        palabra = scanner.nextLine();
-
-        return palabra;
-
-    }
 
 
     /**
