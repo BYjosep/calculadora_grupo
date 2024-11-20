@@ -41,4 +41,37 @@ public class DecimalHexadecimal {
 
         return resultado.reverse().toString();
     }
+
+    /**
+     * convertir hexadecimal a decimal
+     * @param hex
+     * @return
+     */
+    public static int HexadecimalADecimal(String hex) {
+        int decimal = 0;
+        int base = 16; // Base del sistema hexadecimal
+
+        // Convertir a mayúsculas para tratar uniformemente las letras
+        hex = hex.toUpperCase();
+
+        // Procesar cada carácter del número hexadecimal
+        for (int i = 0; i < hex.length(); i++) {
+            char caracter = hex.charAt(i);
+
+            // Obtener el valor numérico del carácter
+            int valor;
+            if (caracter >= '0' && caracter <= '9') {
+                valor = caracter - '0'; // Convertir dígito ('0'-'9') a número
+            } else if (caracter >= 'A' && caracter <= 'F') {
+                valor = caracter - 'A' + 10; // Convertir letra ('A'-'F') a número (10-15)
+            } else {
+                System.err.println("Cadena no válida: contiene caracteres no hexadecimales");
+            }
+
+            // Calcular el valor decimal sumando valor * 16^(posición desde el final)
+            decimal = decimal * base + valor;
+        }
+
+        return decimal;
+    }
 }
