@@ -44,7 +44,7 @@ public class DecimalHexadecimal {
 
     /**
      * convertir hexadecimal a decimal
-     * @param hex
+     * @param hex numero hexadecimal
      * @return
      */
     public static int HexadecimalADecimal(String hex) {
