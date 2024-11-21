@@ -3,12 +3,12 @@ package com.byjosep04.tema04;
 import java.util.Scanner;
 
 public class Operaciones_aritmeticas {
+    public static Scanner escaner = new Scanner(System.in);
     /**
      *@author josehs
-     *El que borre o cambie este codigo es gay
      */
     public static void main( String args[] ) {
-        Scanner escaner = new Scanner(System.in);
+
         int n;
 
         do{
@@ -23,46 +23,81 @@ public class Operaciones_aritmeticas {
             System.out.println("0. Salir");
             n = Integer.parseInt(escaner.nextLine());
             if(n==1){
-                System.out.println("Sumar");
-                System.out.println("Dime el primer numero: ");
-                float x=Float.parseFloat(escaner.nextLine());
-                System.out.println("Dime el segundo numero: ");
-                float y=Float.parseFloat(escaner.nextLine());
-                float z=x+y;
-                System.out.println("La suma de " +x+ " y " + y+ " es: "+z);
+                sumarNumero();
             }else if(n==2){
-                System.out.println("Restar");
-                System.out.println("Dime el primer numero: ");
-                float x=Float.parseFloat(escaner.nextLine());
-                System.out.println("Dime el segundo numero: ");
-                float y=Float.parseFloat(escaner.nextLine());
-                float z=x-y;
-                System.out.println("La resta de " +x+ " y " + y+ " es: "+z);
+                restarNumero();
             }else if(n==3){
-                System.out.println("Multiplicar");
-                System.out.println("Dime el primer numero: ");
-                float x=Float.parseFloat(escaner.nextLine());
-                System.out.println("Dime el segundo numero: ");
-                float y=Float.parseFloat(escaner.nextLine());
-                float z=x*y;
-                System.out.println("La multiplicacion de " +x+ " y " + y+ " es: "+z);
+                multiplicarNumero();
             }else if(n==4){
-                System.out.println("Dividir");
-                System.out.println("Dime el primer numero: ");
-                float x=Float.parseFloat(escaner.nextLine());
-                System.out.println("Dime el segundo numero: ");
-                float y=Float.parseFloat(escaner.nextLine());
-                float z=x/y;
-                System.out.println("La division de " +x+ " y " + y + " es: "+z);
+                dividirNumero();
             }else if(n==5){
-                System.out.println("Resto de la division");
-                System.out.println("Dime el primer numero: ");
-                float x=Float.parseFloat(escaner.nextLine());
-                System.out.println("Dime el segundo numero: ");
-                float y=Float.parseFloat(escaner.nextLine());
-                float z=x%y;
-                System.out.println("El resto de la division de " +x+ " y " + y+ " es: "+z);
+                restoDivision();
             }
         } while(n != 0);
+    }
+
+    /**
+     * @return sumar: Hacemos una suma de dos floats;
+     */
+    public static float sumarNumero(){
+        System.out.println("Sumar\nDime el primer numero: ");
+        float x=Float.parseFloat(escaner.nextLine());
+        System.out.println("Dime el segundo numero: ");
+        float y=Float.parseFloat(escaner.nextLine());
+        float sumar=x+y;
+        System.out.println("La suma de " +x+ " y " + y+ " es: "+sumar);
+        return sumar;
+    }
+
+    /**
+     * @return restar: Restamos de dos numeros;
+     */
+    public static float restarNumero(){
+        System.out.println("Restar\nDime el minuendo: ");
+        float x=Float.parseFloat(escaner.nextLine());
+        System.out.println("Dime el sustraendo: ");
+        float y=Float.parseFloat(escaner.nextLine());
+        float restar=x-y;
+        System.out.println("La resta de " +x+ " y " + y+ " es: "+restar);
+        return restar;
+    }
+
+    /**
+     * @return multiplicar: Multiplicar dos numeros;
+     */
+    public static float multiplicarNumero(){
+        System.out.println("Multiplicar\nDime el primer numero: ");
+        float x=Float.parseFloat(escaner.nextLine());
+        System.out.println("Dime el segundo numero: ");
+        float y=Float.parseFloat(escaner.nextLine());
+        float multiplicar=x*y;
+        System.out.println("La multiplicacion de " +x+ " y " + y+ " es: "+multiplicar);
+        return multiplicar;
+    }
+
+    /**
+     * @return dividir: dividimos dos numeros;
+     */
+    public static float dividirNumero(){
+        System.out.println("Dividir\nDime el dividendo: ");
+        float x=Float.parseFloat(escaner.nextLine());
+        System.out.println("Dime el divisor: ");
+        float y=Float.parseFloat(escaner.nextLine());
+        float dividir=x/y;
+        System.out.println("La division de " +x+ " y " + y + " es: "+dividir);
+        return dividir;
+    }
+
+    /**
+     * @return resto: sacamos el resto de una division;
+     */
+    public static float restoDivision(){
+        System.out.println("Resto de la division\nDime el divisor: ");
+        float x=Float.parseFloat(escaner.nextLine());
+        System.out.println("Dime el divisor: ");
+        float y=Float.parseFloat(escaner.nextLine());
+        float resto=x%y;
+        System.out.println("El resto de la division de " +x+ " y " + y+ " es: "+resto);
+        return resto;
     }
 }
