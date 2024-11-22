@@ -78,7 +78,7 @@ public class BinarioDecimal {
         // Convertir de decimal a binario dividiendo sucesivamente entre 2
         while (numero > 0) {
             binario.insert(0, numero % 2); // Obtiene el residuo (0 o 1) y lo coloca al inicio
-            numero /= 2; // Divide el número por 2 
+            numero /= 2; // Divide el número por 2
         }
 
         return "El número binario es: " + (binario.length() > 0 ? binario.toString() : "0");
