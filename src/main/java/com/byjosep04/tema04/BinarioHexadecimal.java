@@ -2,6 +2,7 @@ package com.byjosep04.tema04;
 
 import com.byjosep04.tema04.lib.StringLib;
 
+
 /**
  * @author BYjosep04
  */
@@ -39,29 +40,39 @@ public class BinarioHexadecimal {
     }
 
 
-
-
-
     /**
-     * @author BYjosep04
+     * Usando el metodo {@link DecimalHexadecimal#HexadecimalADecimal HexadecimalADecimal} y
+     * {@link BinarioDecimal#decimalBinario decimalBinario} se pasa de hexadecimal a binario.
      * @param numero Ingresa un numero en hexadecimal a binario en formato {@link String String}
      * @return Devuelve un {@link String String} con el número en binario
      */
 
     public static String hexadecimalBinario(String numero) {
-        int decimal =0;
-        String binario = "";
+        int decimal;
+        String binario ;
         decimal=DecimalHexadecimal.HexadecimalADecimal(numero);
-
+        binario= BinarioDecimal.decimalBinario(decimal);
         return binario;
     }
 
 
+    /**
+     * Usando el metodo {@link BinarioDecimal#binarioDecimal binarioDecimal} y
+     * {@link DecimalHexadecimal#decimalAHexadecimal decimalAHexadecimal} se pasa de binario a hexadecimal.
+     * @param numero {@link String String} con el número en binario
+     * @return Devuelve el número hexadecimal en formato {@link String String}
+     */
     public static String binarioHexadecimal(String numero) {
-        int numeroDecimal=0;
-
-
-        return DecimalHexadecimal.decimalAHexadecimal(numeroDecimal);
+       int decimal;
+       StringBuilder str= new StringBuilder();
+       String hexadecimal;
+       str.append(BinarioDecimal.binarioDecimal(numero));
+       str.replace(0,22,"");
+       decimal= Integer.parseInt(str.toString());
+       str.replace(0, str.length(),"");
+       hexadecimal=DecimalHexadecimal.decimalAHexadecimal(decimal);
+       str.append("El numero en hexadecimal es: ").append(hexadecimal);
+        return str.toString();
     }
 
 }
