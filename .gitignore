@@ -9,6 +9,8 @@ build/
 .idea/jarRepositories.xml
 .idea/compiler.xml
 .idea/libraries/
+.idea/misc.xml
+.idea/workspace.xml
 *.iws
 *.iml
 *.ipr
@@ -40,3 +42,8 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+/.idea/shelf/Uncommitted_changes_before_Update_at_15_11_2024_0_12_[Changes]/shelved.patch
+/.idea/shelf/Uncommitted_changes_before_Update_at_15_11_2024_0_12_[Changes]/shelved.patch
+/.idea/shelf/Uncommitted_changes_before_Update_at_15_11_2024_0_12__Changes_.xml
+/.idea/shelf/Uncommitted_changes_before_Update_at_21_11_2024_21_37__Changes_.xml
+/.idea/shelf/Uncommitted_changes_before_Update_at_15_11_2024_0_12_[Changes]/shelved.patch
