@@ -7,97 +7,67 @@ public class Operaciones_aritmeticas {
     /**
      *@author josehs
      */
-    public static void main( String args[] ) {
 
-        int n;
-
-        do{
-            System.out.println("Operaciones aritmeticas");
-            System.out.println("==============");
-            System.out.println("1. Sumar.");
-            System.out.println("2. Restar.");
-            System.out.println("3. Multiplicar.");
-            System.out.println("4. Dividir.");
-            System.out.println("5. Resto de la division");
-            System.out.println("------------------------------------");
-            System.out.println("0. Salir");
-            n = Integer.parseInt(escaner.nextLine());
-            if(n==1){
-                sumarNumero();
-            }else if(n==2){
-                restarNumero();
-            }else if(n==3){
-                multiplicarNumero();
-            }else if(n==4){
-                dividirNumero();
-            }else if(n==5){
-                restoDivision();
-            }
-        } while(n != 0);
-    }
 
     /**
      * @return sumar: Hacemos una suma de dos floats;
      */
-    public static float sumarNumero(){
-        System.out.println("Sumar\nDime el primer numero: ");
+    public static String sumarNumero(){
+        System.out.println("Sumar\nDime el primer número: ");
         float x=Float.parseFloat(escaner.nextLine());
-        System.out.println("Dime el segundo numero: ");
+        System.out.println("Dime el segundo número: ");
         float y=Float.parseFloat(escaner.nextLine());
         float sumar=x+y;
-        System.out.println("La suma de " +x+ " y " + y+ " es: "+sumar);
-        return sumar;
+        return "La suma de " +x+ " y " + y+ " es: "+sumar;
     }
 
     /**
      * @return restar: Restamos de dos numeros;
      */
-    public static float restarNumero(){
+    public static String restarNumero(){
         System.out.println("Restar\nDime el minuendo: ");
         float x=Float.parseFloat(escaner.nextLine());
         System.out.println("Dime el sustraendo: ");
         float y=Float.parseFloat(escaner.nextLine());
         float restar=x-y;
-        System.out.println("La resta de " +x+ " y " + y+ " es: "+restar);
-        return restar;
+        return "La resta de " +x+ " y " + y+ " es: "+restar;
+
     }
 
     /**
      * @return multiplicar: Multiplicar dos numeros;
      */
-    public static float multiplicarNumero(){
-        System.out.println("Multiplicar\nDime el primer numero: ");
+    public static String multiplicarNumero(){
+        System.out.println("Multiplicar\nDime el primer número: ");
         float x=Float.parseFloat(escaner.nextLine());
-        System.out.println("Dime el segundo numero: ");
+        System.out.println("Dime el segundo número: ");
         float y=Float.parseFloat(escaner.nextLine());
         float multiplicar=x*y;
-        System.out.println("La multiplicacion de " +x+ " y " + y+ " es: "+multiplicar);
-        return multiplicar;
+        return "La multiplicacion de " +x+ " y " + y+ " es: "+multiplicar;
+
     }
 
     /**
      * @return dividir: dividimos dos numeros;
      */
-    public static float dividirNumero(){
+    public static String dividirNumero(){
         System.out.println("Dividir\nDime el dividendo: ");
         float x=Float.parseFloat(escaner.nextLine());
         System.out.println("Dime el divisor: ");
         float y=Float.parseFloat(escaner.nextLine());
         float dividir=x/y;
-        System.out.println("La division de " +x+ " y " + y + " es: "+dividir);
-        return dividir;
+        return "La division de " +x+ " y " + y + " es: "+dividir;
     }
 
     /**
      * @return resto: sacamos el resto de una division;
      */
-    public static float restoDivision(){
+    public static String restoDivision(){
         System.out.println("Resto de la division\nDime el divisor: ");
         float x=Float.parseFloat(escaner.nextLine());
         System.out.println("Dime el divisor: ");
         float y=Float.parseFloat(escaner.nextLine());
         float resto=x%y;
-        System.out.println("El resto de la division de " +x+ " y " + y+ " es: "+resto);
-        return resto;
+        return "El resto de la division de " +x+ " y " + y+ " es: "+resto;
     }
 }
