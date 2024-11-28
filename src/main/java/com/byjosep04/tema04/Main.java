@@ -5,6 +5,8 @@ public class Main {
     public static void main(String[] args) {
         int opcion;
         opcion=StringLib.ingresarUnNumero("""
+                | Menu Principal              |
+                |-----------------------------|
                 | 1- Operaciones aritmeticas. |
                 | 2- Conversion de bases.     |
                 |-----------------------------|
@@ -28,14 +30,15 @@ public class Main {
 
             opcion = StringLib.ingresarUnNumero("""
                 | Operaciones aritmeticas |
-                | ==============          | 
+                |-------------------------| 
                 | 1. Sumar.               |
                 | 2. Restar.              |
                 | 3. Multiplicar.         |
                 | 4. Dividir.             |
                 | 5. Resto de la division |
                 |-------------------------|
-                0. Salir""",0,5);
+                | 0. Salir                |
+                """,0,5);
 
             switch(opcion){
                 case 1-> total=Operaciones_aritmeticas.sumarNumero();
@@ -53,6 +56,35 @@ public class Main {
     }
     private static void menuConversion(){
 
+        int opcion;
+        String total= "";
+        do {
+
+            opcion = StringLib.ingresarUnNumero("""
+                | Convercion de bases      |
+                |--------------------------| 
+                | 1. Decimal a binario.    |
+                | 2. Binario a decimal.    |
+                | 3. Hexadecimal a binario |
+                | 4. Binario a hexadecimal |
+                | 5. Binario a hexadecimal |
+                | 6. Hexadecimal a binario |
+                |--------------------------|
+                | 0. Salir                 |
+                """,0,5);
+
+            switch(opcion){
+                case 1-> ;
+                case 2-> ;
+                case 3-> ;
+                case 4-> ;
+                case 5-> ;
+                case 0-> {}
+            }
+            if (opcion!= 0){
+                System.out.println(total);
+            }
+        }while (opcion!=0);
 
     }
 }
