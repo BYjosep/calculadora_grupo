@@ -10,7 +10,7 @@ public class Operaciones_aritmeticas {
 
 
     /**
-     * @return sumar: Hacemos una suma de dos floats;
+     * @return String sumar: Hacemos que se imprima la suma como un float;
      */
     public static String sumarNumero(){
         System.out.println("Sumar\nDime el primer número: ");
@@ -22,7 +22,7 @@ public class Operaciones_aritmeticas {
     }
 
     /**
-     * @return restar: Restamos de dos numeros;
+     * @return String restar: Hacemos que se imprima la resta como un float;
      */
     public static String restarNumero(){
         System.out.println("Restar\nDime el minuendo: ");
@@ -35,7 +35,7 @@ public class Operaciones_aritmeticas {
     }
 
     /**
-     * @return multiplicar: Multiplicar dos numeros;
+     * @return String multiplicar: Hacemos que se imprima el producto como un float;
      */
     public static String multiplicarNumero(){
         System.out.println("Multiplicar\nDime el primer número: ");
@@ -48,7 +48,7 @@ public class Operaciones_aritmeticas {
     }
 
     /**
-     * @return dividir: dividimos dos numeros;
+     * @return String dividir: Hacemos que se imprima el cociente como un float;
      */
     public static String dividirNumero(){
         System.out.println("Dividir\nDime el dividendo: ");
@@ -60,7 +60,7 @@ public class Operaciones_aritmeticas {
     }
 
     /**
-     * @return resto: sacamos el resto de una division;
+     * @return String resto: Hacemos que se imprima el resto de la division como un float;
      */
     public static String restoDivision(){
         System.out.println("Resto de la division\nDime el divisor: ");
