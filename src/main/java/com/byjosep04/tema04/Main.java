@@ -30,7 +30,7 @@ public class Main {
 
             opcion = StringLib.ingresarUnNumero("""
                 | Operaciones aritmeticas |
-                |-------------------------| 
+                |-------------------------|
                 | 1. Sumar.               |
                 | 2. Restar.              |
                 | 3. Multiplicar.         |
@@ -63,11 +63,11 @@ public class Main {
 
             opcion = StringLib.ingresarUnNumero("""
                 | Convercion de bases      |
-                |--------------------------| 
+                |--------------------------|
                 | 1. Decimal a binario.    |
                 | 2. Binario a decimal.    |
-                | 3. Hexadecimal a binario |
-                | 4. Binario a hexadecimal |
+                | 3. Decimal a hexadecimal |
+                | 4. Hexadecimal a decimal |
                 | 5. Binario a hexadecimal |
                 | 6. Hexadecimal a binario |
                 |--------------------------|
