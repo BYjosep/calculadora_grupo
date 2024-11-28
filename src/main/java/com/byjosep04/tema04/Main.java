@@ -58,7 +58,8 @@ public class Main {
 
         int opcion;
         String total= "";
-        do {
+
+       do {
 
             opcion = StringLib.ingresarUnNumero("""
                 | Convercion de bases      |
@@ -71,14 +72,15 @@ public class Main {
                 | 6. Hexadecimal a binario |
                 |--------------------------|
                 | 0. Salir                 |
-                """,0,5);
+                """,0,6);
 
             switch(opcion){
                 case 1-> ;
                 case 2-> ;
                 case 3-> ;
                 case 4-> ;
-                case 5-> ;
+                case 5-> BinarioHexadecimal.binarioHexadecimal();
+                case 6-> BinarioHexadecimal.hexadecimalBinario();
                 case 0-> {}
             }
             if (opcion!= 0){

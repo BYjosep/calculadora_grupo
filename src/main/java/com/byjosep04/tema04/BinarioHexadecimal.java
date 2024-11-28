@@ -24,14 +24,10 @@ public class BinarioHexadecimal {
                 0. Salir""",0,2);
         switch (opcion) {
             case 1-> {
-                numero= StringLib.ingresarTexto("Ingrese un numero en hexadecimal");
-                conversion = hexadecimalBinario(numero);
-                System.out.println(conversion);
+                hexadecimalBinario();
             }
             case 2-> {
-                numero= StringLib.ingresarTexto("Ingrese un numero en binario");
-                conversion = binarioHexadecimal(numero);
-                System.out.println(conversion);
+                binarioHexadecimal();
             }
             default -> {}
         }
@@ -43,36 +39,39 @@ public class BinarioHexadecimal {
     /**
      * Usando el metodo {@link DecimalHexadecimal#HexadecimalADecimal HexadecimalADecimal} y
      * {@link BinarioDecimal#decimalBinario decimalBinario} se pasa de hexadecimal a binario.
-     * @param numero Ingresa un numero en hexadecimal a binario en formato {@link String String}
      * @return Devuelve un {@link String String} con el número en binario
      */
 
-    public static String hexadecimalBinario(String numero) {
+    public static void hexadecimalBinario() {
+        String numero= StringLib.ingresarTexto("Ingrese un numero en binario");
         int decimal;
         String binario ;
         decimal=DecimalHexadecimal.HexadecimalADecimal(numero);
         binario= BinarioDecimal.decimalBinario(decimal);
-        return binario;
+
+        System.out.println("El numero en binario es: "+binario);
     }
 
 
     /**
      * Usando el metodo {@link BinarioDecimal#binarioDecimal binarioDecimal} y
      * {@link DecimalHexadecimal#decimalAHexadecimal decimalAHexadecimal} se pasa de binario a hexadecimal.
-     * @param numero {@link String String} con el número en binario
      * @return Devuelve el número hexadecimal en formato {@link String String}
      */
-    public static String binarioHexadecimal(String numero) {
-       int decimal;
-       StringBuilder str= new StringBuilder();
-       String hexadecimal;
-       str.append(BinarioDecimal.binarioDecimal(numero));
+    public static void binarioHexadecimal() {
+        int decimal;
+        StringBuilder str= new StringBuilder();
+        String hexadecimal;
+
+        String numero= StringLib.ingresarTexto("Ingrese un numero en binario");
+        str.append(BinarioDecimal.binarioDecimal(numero));
+       decimal=DecimalHexadecimal.HexadecimalADecimal(numero);
        str.replace(0,22,"");
        decimal= Integer.parseInt(str.toString());
        str.replace(0, str.length(),"");
        hexadecimal=DecimalHexadecimal.decimalAHexadecimal(decimal);
-       str.append("El numero en hexadecimal es: ").append(hexadecimal);
-        return str.toString();
+
+      System.out.println("El numero en hexadecimal es: "+ hexadecimal);
     }
 
 }
