@@ -2,8 +2,13 @@ package com.byjosep04.tema04;
 
 import com.byjosep04.tema04.lib.StringLib;
 public class Main {
+    public static final String ESC = "\u001b[";
     public static void main(String[] args) {
         int opcion;
+
+        System.out.print(ESC + "H");
+        System.out.print(ESC + "2J");
+        System.out.flush();
         opcion=StringLib.ingresarUnNumero("""
                 | Menu Principal              |
                 |-----------------------------|
@@ -26,6 +31,10 @@ public class Main {
     private static void menuOperacion(){
         int opcion;
         String total= "";
+
+        System.out.print(ESC + "H");
+        System.out.print(ESC + "2J");
+        System.out.flush();
         do {
 
             opcion = StringLib.ingresarUnNumero("""
@@ -55,13 +64,17 @@ public class Main {
 
     }
     private static void menuConversion(){
-
-        int opcion;
+        int numero, opcion;
         String total= "";
 
-       do {
+        System.out.print(ESC + "H");
+        System.out.print(ESC + "2J");
+        System.out.flush();
 
-            opcion = StringLib.ingresarUnNumero("""
+
+        do {
+
+           opcion = StringLib.ingresarUnNumero("""
                 | Convercion de bases      |
                 |--------------------------|
                 | 1. Decimal a binario.    |
@@ -74,11 +87,27 @@ public class Main {
                 | 0. Salir                 |
                 """,0,6);
 
-            switch(opcion){
-                case 1-> ;
-                case 2-> ;
-                case 3-> ;
-                case 4-> ;
+           switch(opcion){
+                case 1-> {
+                    numero = StringLib.ingresarUnNumero("Ingrese un número en decima:");
+                    String conversion = BinarioDecimal.decimalBinario(numero);
+                    System.out.println(conversion);
+                }
+                case 2-> {
+                     String num = StringLib.ingresarTexto("Ingrese un número en binario:");
+                    String conversion = BinarioDecimal.binarioDecimal(num);
+                    System.out.println(conversion);
+                }
+                case 3-> {
+                    numero = StringLib.ingresarUnNumero("Ingresa un numero en decimal");
+                    String hexadecimal = DecimalHexadecimal.decimalAHexadecimal(numero);
+                    System.out.println("El número " + numero + " en hexadecimal es: " + hexadecimal);
+                }
+                case 4-> {
+                    String hexadecimal = StringLib.ingresarTexto("Ingresa un numero en hexadecimal");
+                    numero=DecimalHexadecimal.hexadecimalADecimal(hexadecimal);
+                    System.out.println("El número " + hexadecimal + " en decimal es: " + numero);
+                }
                 case 5-> BinarioHexadecimal.binarioHexadecimal();
                 case 6-> BinarioHexadecimal.hexadecimalBinario();
                 case 0-> {}

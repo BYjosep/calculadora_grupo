@@ -3,23 +3,11 @@ package com.byjosep04.tema04;
 import java.util.Scanner;
 
 public class DecimalHexadecimal {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
 
-        int numeroDecimal = 10000;
-
-        String hexadecimal = decimalAHexadecimal(numeroDecimal);
-        System.out.println("El número " + numeroDecimal + " en hexadecimal es: " + hexadecimal);
-
-        String numeroHexadecimal = "1a2b";
-
-        int decimal =HexadecimalADecimal(numeroHexadecimal);
-        System.out.println("El número " + numeroHexadecimal + " en decimal es: " + decimal);
-    }
 
     /**
      * Convertir un numero decimal en hexadecimal
-     * @param numero el numero decimal
+     * @param numero el número decimal
      * @return su equivalente en hexadeimal
      */
     public static String decimalAHexadecimal(int numero) {
@@ -44,6 +32,7 @@ public class DecimalHexadecimal {
 
 
         return resultado.reverse().toString();
+
     }
 
     /**
@@ -51,7 +40,7 @@ public class DecimalHexadecimal {
      * @param hex numero hexadecimal
      * @return
      */
-    public static int HexadecimalADecimal(String hex) {
+    public static int hexadecimalADecimal(String hex) {
         int decimal = 0;
         int base = 16; // Base del sistema hexadecimal
 

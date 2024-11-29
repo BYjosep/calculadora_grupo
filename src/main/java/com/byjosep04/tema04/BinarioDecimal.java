@@ -6,39 +6,8 @@ import com.byjosep04.tema04.lib.StringLib;
  * @author Alvaro Campos Bolufer
  */
 public class BinarioDecimal {
-    public static final String ESC = "\u001b[";
 
-    public static void main(String[] args) {
-        int opcion;
-        String numero;
-        String conversion;
 
-        do {
-            System.out.print(ESC + "H");
-            System.out.print(ESC + "2J");
-            System.out.flush();
-
-            opcion = StringLib.ingresarUnNumero("Ingrese una opción:\n" +
-                    "1. Binario a decimal\n" +
-                    "2. Decimal a binario\n" +
-                    "0. Salir", 0, 2);
-
-            switch (opcion) {
-                case 1 -> {
-                    numero = StringLib.ingresarTexto("Ingrese un número en binario:");
-                    conversion = binarioDecimal(numero);
-                    System.out.println(conversion);
-                }
-                case 2 -> {
-                    numero = StringLib.ingresarTexto("Ingrese un número en decimal:");
-                    conversion = decimalBinario(Integer.parseInt(numero));
-                    System.out.println(conversion);
-                }
-                default -> {
-                }
-            }
-        } while (opcion != 0);
-    }
     /**
      * Convierte un número binario a decimal de forma manual.
      * @author Alvaro Campos Bolufer

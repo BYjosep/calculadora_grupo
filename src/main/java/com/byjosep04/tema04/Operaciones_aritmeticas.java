@@ -2,12 +2,11 @@ package com.byjosep04.tema04;
 
 import java.util.Scanner;
 
+/**
+ *@author josehs
+ */
 public class Operaciones_aritmeticas {
     public static Scanner escaner = new Scanner(System.in);
-    /**
-     *@author josehs
-     */
-
 
     /**
      * @return String sumar: Hacemos que se imprima la suma como un float;
