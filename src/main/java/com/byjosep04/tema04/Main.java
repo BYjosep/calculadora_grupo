@@ -13,13 +13,14 @@ public class Main {
             System.out.print(ESC + "2J");
             System.out.flush();
             opcion = StringLib.ingresarUnNumero("""
-                    | Menu Principal              |
+                    | Menú Principal              |
                     |-----------------------------|
-                    | 1- Operaciones aritmeticas. |
-                    | 2- Conversion de bases.     |
+                    | 1- Operaciones aritméticas. |
+                    | 2- Conversión de bases.     |
                     |-----------------------------|
                     | 0- salir                    |
                     """, 0, 2);
+            //Dependiendo de la opción elegida arriba, se elegira uno de los siguientes casos o el menú de operaciones aritmeticas "menuOperacion()" o el menú de conversión "menuConversion()"
             switch (opcion) {
                 case 1 -> menuOperacion();
                 case 2 -> menuConversion();
@@ -31,7 +32,7 @@ public class Main {
     }
 
     /**
-     * Este es el submenu para las operaciones.
+     * Este es el submenú para las operaciones.
      * Las operaciones son sumar, restar, multiplicar, dividir y sacar el resto
      */
     private static void menuOperacion() {
@@ -42,19 +43,19 @@ public class Main {
         System.out.print(ESC + "2J");
         System.out.flush();
         do {
-
-            opcion = StringLib.ingresarUnNumero("""
-                    | Operaciones aritmeticas |
+            //Menú que se mostrará al usuario cuando necesite hacer operaciones aritmeticas
+            opcion = StringLib.ingresarUnNumero("""    
+                    | Operaciones aritméticas |
                     |-------------------------|
-                    | 1. Sumar.               |
-                    | 2. Restar.              |
-                    | 3. Multiplicar.         |
-                    | 4. Dividir.             |
+                    | 1. Sumar                |
+                    | 2. Restar               |
+                    | 3. Multiplicar          |
+                    | 4. Dividir              |
                     | 5. Resto de la division |
                     |-------------------------|
                     | 0. Salir                |
                     """, 0, 5);
-
+            //Dependiendo de la opción elegida arriba, se elegira uno de los siguientes casos
             switch (opcion) {
                 case 1 -> total = Operaciones_aritmeticas.sumarNumero();
                 case 2 -> total = Operaciones_aritmeticas.restarNumero();
@@ -85,9 +86,9 @@ public class Main {
 
 
         do {
-
+            //Menú que se mostrará al usuario cuando necesite hacer operaciones de conversión
             opcion = StringLib.ingresarUnNumero("""
-                    | Conversion de bases      |
+                    | Conversión de bases      |
                     |--------------------------|
                     | 1. Decimal a binario.    |
                     | 2. Binario a decimal.    |
@@ -98,7 +99,7 @@ public class Main {
                     |--------------------------|
                     | 0. Salir                 |
                     """, 0, 6);
-
+            //Dependiendo de la opción elegida arriba, se elegira uno de los siguientes casos
             switch (opcion) {
                 case 1 -> {
                     numero = StringLib.ingresarUnNumero("Ingrese un número en decimal:");
@@ -116,7 +117,7 @@ public class Main {
                     System.out.println("El número " + numero + " en hexadecimal es: " + hexadecimal);
                 }
                 case 4 -> {
-                    String hexadecimal = StringLib.ingresarTexto("Ingresa un numero en hexadecimal");
+                    String hexadecimal = StringLib.ingresarTexto("Ingresa un número en hexadecimal");
                     numero = DecimalHexadecimal.hexadecimalADecimal(hexadecimal);
                     System.out.println("El número " + hexadecimal + " en decimal es: " + numero);
                 }
