@@ -18,16 +18,16 @@ public class Main {
                 | 0- salir                    |
                 """, 0,2);
         switch(opcion){
-            case 1-> {
-                menuOperacion();
-            }
-            case 2-> {
-                menuConversion();
-            }
+            case 1-> menuOperacion();
+            case 2-> menuConversion();
             case 0-> {}
         }
     }
 
+    /**
+     * Este es el submenu para las operaciones.
+     * Las operaciones son sumar, restar, multiplicar, dividir y sacar el resto
+     */
     private static void menuOperacion(){
         int opcion;
         String total= "";
@@ -63,6 +63,11 @@ public class Main {
         }while (opcion!=0);
 
     }
+
+    /**
+     * Este es el submenu para la conversion de bases
+     * las bases son: binario decimal y hexadecimal
+     */
     private static void menuConversion(){
         int numero, opcion;
         String total= "";
@@ -75,7 +80,7 @@ public class Main {
         do {
 
            opcion = StringLib.ingresarUnNumero("""
-                | Convercion de bases      |
+                | Conversion de bases      |
                 |--------------------------|
                 | 1. Decimal a binario.    |
                 | 2. Binario a decimal.    |
@@ -89,7 +94,7 @@ public class Main {
 
            switch(opcion){
                 case 1-> {
-                    numero = StringLib.ingresarUnNumero("Ingrese un número en decima:");
+                    numero = StringLib.ingresarUnNumero("Ingrese un número en decimal:");
                     String conversion = BinarioDecimal.decimalBinario(numero);
                     System.out.println(conversion);
                 }
