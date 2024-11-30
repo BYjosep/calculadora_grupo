@@ -7,7 +7,7 @@ import java.util.Scanner;
  */
 public class StringLib {
 
-    public static  Scanner scanner = new Scanner(System.in);
+    public static Scanner scanner = new Scanner(System.in);
     /* ******************************
      *  ********** Entrada ************
      *  ****************************** */
@@ -15,7 +15,7 @@ public class StringLib {
     /**
      * cerrar {@link Scanner Scanner}
      */
-    public static void cerrarScaner(){
+    public static void cerrarScaner() {
         scanner.close();
     }
 
@@ -23,6 +23,7 @@ public class StringLib {
      * Ingresar frase
      * Recuerde cerrar {@link Scanner Scanner} con el metodo cerrarScaner
      * (Echo para no tener que estar escribiendo este codigo en cada ejercicio)
+     *
      * @return Devuelve la frase ingresada en formato {@link String String}
      */
     public static String ingresarFrase() {
@@ -37,6 +38,7 @@ public class StringLib {
      * Ingresar text.
      * Recuerde cerrar {@link Scanner Scanner} con el metodo cerrarScaner
      * (Echo para no tener que estar escribiendo este codigo en cada ejercicio)
+     *
      * @return Devuelve la frase ingresada en formato {@link String String}
      */
     public static String ingresarTexto(String texto) {
@@ -94,7 +96,7 @@ public class StringLib {
      *
      * @return Devuelve la frase ingresada en formato {@link Character char}
      */
-    public static int ingresarUnNumero(String texto ) {
+    public static int ingresarUnNumero(String texto) {
         System.out.println(texto);
 
         return Integer.parseInt(scanner.nextLine());
@@ -135,7 +137,7 @@ public class StringLib {
 
             System.out.println(texto);
             numero = Integer.parseInt(scanner.nextLine());
-        }while (numero < min && numero > max);
+        } while (numero < min && numero > max);
 
         return numero;
 
@@ -432,17 +434,17 @@ public class StringLib {
 
 
     /**
-     * @param nombre Nombre ingresado
-     * @param primerApellido Primer apellido ingresado
+     * @param nombre          Nombre ingresado
+     * @param primerApellido  Primer apellido ingresado
      * @param segundoApellido Segundo apellido ingresado
      */
-    public static void concentrador (String nombre, String primerApellido, String segundoApellido){
-        String nombreStr= nombre + " " + primerApellido + " " + segundoApellido;
+    public static void concentrador(String nombre, String primerApellido, String segundoApellido) {
+        String nombreStr = nombre + " " + primerApellido + " " + segundoApellido;
 
         System.out.println(nombreCompletoEnMayusculasMinusculasYLongitud(nombreStr));
         primerosCincoCaracteres(nombreStr);
 
-        System.out.println("Hay "+ocurrenciasDeUltimoCaracter(nombreStr)+" ocurrencias en el nombre completo");
+        System.out.println("Hay " + ocurrenciasDeUltimoCaracter(nombreStr) + " ocurrencias en el nombre completo");
         System.out.println(ocurrenciaPrimeraLetraEnMayuscula(nombreStr));
         System.out.println(cadenaConSimbolosDelanteDetras(nombreStr));
         System.out.println(cadenaInvertida(nombreStr));
@@ -452,29 +454,29 @@ public class StringLib {
      * @param nombreComppleto Nombre con apellidos en formato {@link String String}
      * @return Devuelve un String con toda la información necesaria
      */
-    public static String nombreCompletoEnMayusculasMinusculasYLongitud(String nombreComppleto){
+    public static String nombreCompletoEnMayusculasMinusculasYLongitud(String nombreComppleto) {
         String nombreMayusculas, nombreMinusculas;
         int longitud;
         nombreMayusculas = nombreComppleto.toUpperCase();
         nombreMinusculas = nombreComppleto.toLowerCase();
         longitud = nombreComppleto.length();
-        return "El nombre completo en mayusculas "+ nombreMayusculas+
-                ".\nEl nombre en minusculas " +nombreMinusculas+
-                "\nLa longitud del nombre completo "+longitud;
+        return "El nombre completo en mayusculas " + nombreMayusculas +
+                ".\nEl nombre en minusculas " + nombreMinusculas +
+                "\nLa longitud del nombre completo " + longitud;
     }
 
 
     /**
      * @param nombreComppleto El nombre completo en formato {@link String String}
      */
-    public static void primerosCincoCaracteres(String nombreComppleto){
+    public static void primerosCincoCaracteres(String nombreComppleto) {
         StringBuilder letras = new StringBuilder();
-        if (nombreComppleto.length()> 5){
+        if (nombreComppleto.length() > 5) {
             for (int i = 0; i < 5; i++) {
                 letras.append(nombreComppleto.charAt(i));
             }
             System.out.println(letras);
-        }else {
+        } else {
             System.err.println("Error, el nombre no cumple el tamaño minimo de 5 caracteres");
         }
     }
@@ -482,15 +484,16 @@ public class StringLib {
 
     /**
      * cuenta las ocurrencias de la ultima letra del texto
+     *
      * @param texto Ingrese el texto en formato {@link  String String}
      * @return Devuelve un numero de tipo {@link Integer int}
      */
-    public static int ocurrenciasDeUltimoCaracter(String texto){
+    public static int ocurrenciasDeUltimoCaracter(String texto) {
         char ultimaLetra;
-        ultimaLetra= texto.charAt(texto.length()-1);
-        int ocurrencias=0;
+        ultimaLetra = texto.charAt(texto.length() - 1);
+        int ocurrencias = 0;
         for (int i = 0; i < texto.length(); i++) {
-            if (ultimaLetra == texto.charAt(i)){
+            if (ultimaLetra == texto.charAt(i)) {
                 ocurrencias++;
             }
         }
@@ -502,11 +505,12 @@ public class StringLib {
     /**
      * Ingresa el texto y devuelve la frase pero la primera letra y
      * las que coincidan en maysculas
+     *
      * @param texto Ingrese el texto en formaro {@link String String}
      * @return Devuelve todas las letras que coincidan con la primera
      * por la letra en mayusculas
      */
-    public static String ocurrenciaPrimeraLetraEnMayuscula(String texto){
+    public static String ocurrenciaPrimeraLetraEnMayuscula(String texto) {
         char primeraLetra = texto.charAt(0);
         String str = Character.toString(primeraLetra);
         String mensaje;
@@ -520,7 +524,7 @@ public class StringLib {
      * @param texto Texto en formato {@link String String}
      * @return devuelve *** texto ***
      */
-    public static String cadenaConSimbolosDelanteDetras(String texto){
+    public static String cadenaConSimbolosDelanteDetras(String texto) {
         return "***" + " " + texto + " " + "***";
     }
 
@@ -529,7 +533,7 @@ public class StringLib {
      * @param texto Ingrese el texto en formato {@link String String}
      * @return Devuelve la cadena en formato {@link String String} a la inversa
      */
-    public static String cadenaInvertida(String texto){
+    public static String cadenaInvertida(String texto) {
         StringBuilder sb = new StringBuilder();
         sb.append(texto);
         return sb.reverse().toString();
