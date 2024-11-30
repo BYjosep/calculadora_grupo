@@ -6,10 +6,11 @@ public class Main {
     public static void main(String[] args) {
         int opcion;
 
-        System.out.print(ESC + "H");
-        System.out.print(ESC + "2J");
-        System.out.flush();
-        opcion=StringLib.ingresarUnNumero("""
+        do {
+            System.out.print(ESC + "H");
+            System.out.print(ESC + "2J");
+            System.out.flush();
+            opcion=StringLib.ingresarUnNumero("""
                 | Menu Principal              |
                 |-----------------------------|
                 | 1- Operaciones aritmeticas. |
@@ -17,11 +18,13 @@ public class Main {
                 |-----------------------------|
                 | 0- salir                    |
                 """, 0,2);
-        switch(opcion){
-            case 1-> menuOperacion();
-            case 2-> menuConversion();
-            case 0-> {}
-        }
+            switch(opcion){
+                case 1-> menuOperacion();
+                case 2-> menuConversion();
+                case 0-> {}
+            }
+        }while (opcion!=0);
+
     }
 
     /**
