@@ -2,6 +2,7 @@ package com.byjosep04.tema04;
 
 /**
  * Clase para convertir números entre binario y decimal.
+ *
  * @author Alvaro Campos Bolufer
  */
 public class BinarioDecimal {
@@ -18,8 +19,8 @@ public class BinarioDecimal {
         //Se podrían realizar operaciones de conversión de decimal a binario con coma usando double 
         //pero el proceso es mas complejo y no creo que sea de útilidad, para un usario final ya que no conigue una información que considere relevante
         try {
-            int decimal = 0;                        
-            int numpotencia = 0;                   
+            int decimal = 0;
+            int numpotencia = 0;
 
             // Convertir de binario a decimal recorriendo el número desde el final, no se si es la mejor forma de hacerlo
             for (int i = numero.length() - 1; i >= 0; i--) {
