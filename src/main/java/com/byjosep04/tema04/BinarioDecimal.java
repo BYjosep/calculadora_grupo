@@ -1,9 +1,8 @@
 package com.byjosep04.tema04;
 
-import com.byjosep04.tema04.lib.StringLib;
-
 /**
  * Clase para convertir números entre binario y decimal.
+ *
  * @author Alvaro Campos Bolufer
  */
 public class BinarioDecimal {
@@ -11,16 +10,17 @@ public class BinarioDecimal {
 
     /**
      * Convierte un número binario a decimal de forma manual.
-     * @author Alvaro Campos Bolufer
+     *
      * @param numero Número en binario.
      * @return Número en decimal como {@link String String}.
+     * @author Alvaro Campos Bolufer
      */
     public static String binarioDecimal(String numero) {
         //Se podrían realizar operaciones de conversión de decimal a binario con coma usando double 
         //pero el proceso es mas complejo y no creo que sea de útilidad, para un usario final ya que no conigue una información que considere relevante
         try {
-            int decimal = 0;                        
-            int numpotencia = 0;                   
+            int decimal = 0;
+            int numpotencia = 0;
 
             // Convertir de binario a decimal recorriendo el número desde el final, no se si es la mejor forma de hacerlo
             for (int i = numero.length() - 1; i >= 0; i--) {
@@ -40,9 +40,10 @@ public class BinarioDecimal {
 
     /**
      * Convierte un número decimal a binario de forma manual.
-     * @author Alvaro Campos Bolufer
+     *
      * @param numero Número en decimal.
      * @return Número en binario como {@link String String}.
+     * @author Alvaro Campos Bolufer
      */
     public static String decimalBinario(int numero) {
         StringBuilder binario = new StringBuilder();
@@ -58,9 +59,10 @@ public class BinarioDecimal {
 
     /**
      * Se usa en el metodo binarioDecimal, ya que no se puede usar Math.pow().
-     * @author Alvaro Campos Bolufer
-     * @param base Base sobre la que se aplica el exponente
+     *
+     * @param base      Base sobre la que se aplica el exponente
      * @param exponente El propio exponente, las veces que se multiplicara por sí misma la base.
+     * @author Alvaro Campos Bolufer
      */
     public static int potencia(int base, int exponente) {
         int resultado = 1;

@@ -1,12 +1,11 @@
 package com.byjosep04.tema04;
 
-import java.util.Scanner;
-
 public class DecimalHexadecimal {
 
 
     /**
      * Convertir un numero decimal en hexadecimal
+     *
      * @param numero el número decimal
      * @return su equivalente en hexadecimal
      */
@@ -37,6 +36,7 @@ public class DecimalHexadecimal {
 
     /**
      * convertir hexadecimal a decimal
+     *
      * @param hex numero hexadecimal
      * @return Devuelve el número en formato decimal con formato entero
      */
