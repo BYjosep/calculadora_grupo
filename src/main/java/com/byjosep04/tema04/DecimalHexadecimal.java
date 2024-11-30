@@ -8,7 +8,7 @@ public class DecimalHexadecimal {
     /**
      * Convertir un numero decimal en hexadecimal
      * @param numero el número decimal
-     * @return su equivalente en hexadeimal
+     * @return su equivalente en hexadecimal
      */
     public static String decimalAHexadecimal(int numero) {
         StringBuilder resultado = new StringBuilder();
@@ -38,7 +38,7 @@ public class DecimalHexadecimal {
     /**
      * convertir hexadecimal a decimal
      * @param hex numero hexadecimal
-     * @return
+     * @return Devuelve el número en formato decimal con formato entero
      */
     public static int hexadecimalADecimal(String hex) {
         int decimal = 0;

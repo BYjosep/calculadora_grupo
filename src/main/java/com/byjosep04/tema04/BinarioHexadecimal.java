@@ -13,7 +13,6 @@ public class BinarioHexadecimal {
     /**
      * Usando el metodo {@link DecimalHexadecimal#hexadecimalADecimal HexadecimalADecimal} y
      * {@link BinarioDecimal#decimalBinario decimalBinario} se pasa de hexadecimal a binario.
-     * @return Devuelve un {@link String String} con el número en binario
      */
 
     public static void hexadecimalBinario() {
@@ -30,7 +29,6 @@ public class BinarioHexadecimal {
     /**
      * Usando el metodo {@link BinarioDecimal#binarioDecimal binarioDecimal} y
      * {@link DecimalHexadecimal#decimalAHexadecimal decimalAHexadecimal} se pasa de binario a hexadecimal.
-     * @return Devuelve el número hexadecimal en formato {@link String String}
      */
     public static void binarioHexadecimal() {
         int decimal;

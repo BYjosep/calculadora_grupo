@@ -54,11 +54,10 @@ public class BinarioDecimal {
     }
 
     /**
-     * Se usa en el metodo binarioDecimal ya que no se puede usar Math.pow().
+     * Se usa en el metodo binarioDecimal, ya que no se puede usar Math.pow().
      * @author Alvaro Campos Bolufer
      * @param base Base sobre la que se aplica el exponente
-     * @param exponente El propio exponente, las veces que se multiplicara por si misma la base.
-     * @return
+     * @param exponente El propio exponente, las veces que se multiplicara por sí misma la base.
      */
     public static int potencia(int base, int exponente) {
         int resultado = 1;
