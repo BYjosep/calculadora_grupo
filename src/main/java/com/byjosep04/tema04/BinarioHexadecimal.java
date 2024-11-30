@@ -16,13 +16,13 @@ public class BinarioHexadecimal {
      */
 
     public static void hexadecimalBinario() {
-        String numero= StringLib.ingresarTexto("Ingrese un numero en hexadecimal");
+        String numero = StringLib.ingresarTexto("Ingrese un numero en hexadecimal");
         int decimal;
-        String binario ;
-        decimal=DecimalHexadecimal.hexadecimalADecimal(numero);
-        binario= BinarioDecimal.decimalBinario(decimal);
+        String binario;
+        decimal = DecimalHexadecimal.hexadecimalADecimal(numero);
+        binario = BinarioDecimal.decimalBinario(decimal);
 
-        System.out.println("El numero en binario es: "+binario);
+        System.out.println("El numero en binario es: " + binario);
     }
 
 
@@ -32,18 +32,18 @@ public class BinarioHexadecimal {
      */
     public static void binarioHexadecimal() {
         int decimal;
-        StringBuilder str= new StringBuilder();
+        StringBuilder str = new StringBuilder();
         String hexadecimal;
 
-        String numero= StringLib.ingresarTexto("Ingrese un numero en binario");
+        String numero = StringLib.ingresarTexto("Ingrese un numero en binario");
         str.append(BinarioDecimal.binarioDecimal(numero));
-       decimal=DecimalHexadecimal.hexadecimalADecimal(numero);
-       str.replace(0,22,"");
-       decimal= Integer.parseInt(str.toString());
-       str.replace(0, str.length(),"");
-       hexadecimal=DecimalHexadecimal.decimalAHexadecimal(decimal);
+        decimal = DecimalHexadecimal.hexadecimalADecimal(numero);
+        str.replace(0, 22, "");
+        decimal = Integer.parseInt(str.toString());
+        str.replace(0, str.length(), "");
+        hexadecimal = DecimalHexadecimal.decimalAHexadecimal(decimal);
 
-      System.out.println("El numero en hexadecimal es: "+ hexadecimal);
+        System.out.println("El numero en hexadecimal es: " + hexadecimal);
     }
 
 }
