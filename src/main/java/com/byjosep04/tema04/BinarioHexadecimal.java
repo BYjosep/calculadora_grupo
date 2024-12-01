@@ -7,7 +7,6 @@ import com.byjosep04.tema04.lib.StringLib;
  * @author BYjosep04
  */
 public class BinarioHexadecimal {
-    public static final String ESC = "\u001b[";
 
 
     /**
