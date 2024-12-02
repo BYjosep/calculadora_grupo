@@ -36,7 +36,6 @@ public class BinarioHexadecimal {
 
         String numero = StringLib.ingresarTexto("Ingrese un numero en binario");
         str.append(BinarioDecimal.binarioDecimal(numero));
-        decimal = DecimalHexadecimal.hexadecimalADecimal(numero);
         str.replace(0, 22, "");
         decimal = Integer.parseInt(str.toString());
         str.replace(0, str.length(), "");
